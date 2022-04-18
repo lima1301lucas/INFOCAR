@@ -1,0 +1,71 @@
+string path3;
+        int counter = 0;
+
+
+        path3 = @"C:\Users\msant\Desktop\New folder\";
+
+        string[] files = Directory.GetFiles(path3);
+
+        foreach (var file in files)
+        {
+            List<string> lines = new List<string>();
+
+            if (File.Exists(file))
+            {
+                try
+                {
+                    //ABRE E LÊ O ARQUIVO TXT
+
+                    using (StreamReader reader = new StreamReader(file))
+                    {
+                        while (!reader.EndOfStream)
+                        {
+
+                            string line = reader.ReadLine();
+
+                            if (!string.IsNullOrWhiteSpace(line))
+                            {
+                                var lineOutput = counter++ + ";";
+                                lines.Add(lineOutput + line);
+                            }
+
+                        }
+                        reader.Close();
+                    }
+
+                    foreach (var line in lines)
+                    {
+
+                        Console.WriteLine(line);
+                    }
+
+
+                    //ESCREVE NOS ARQUIVOS TXT
+
+                    using (StreamWriter writer = new StreamWriter(file))
+                    {
+                        foreach (var item in lines)
+                        {
+                            writer.WriteLine(item);
+                        }
+
+                        writer.Close();
+                    }
+
+
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    Console.ReadKey();
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("ALERTA: O ARQUIVO LOCALIZADO EM <-- " + path3+ " --> NAO EXISTE.");
+            }
+
+
+            Console.ReadKey();
+        }
