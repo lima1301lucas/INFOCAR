@@ -1,0 +1,7 @@
+C:\Users\Infocar\Desktop\LeHTML\LeHTML\bin\Debug\LeHTML.exe.config
+C:\Users\Infocar\Desktop\LeHTML\LeHTML\bin\Debug\LeHTML.exe
+C:\Users\Infocar\Desktop\LeHTML\LeHTML\bin\Debug\LeHTML.pdb
+C:\Users\Infocar\Desktop\LeHTML\LeHTML\obj\Debug\LeHTML.csprojAssemblyReference.cache
+C:\Users\Infocar\Desktop\LeHTML\LeHTML\obj\Debug\LeHTML.csproj.CoreCompileInputs.cache
+C:\Users\Infocar\Desktop\LeHTML\LeHTML\obj\Debug\LeHTML.exe
+C:\Users\Infocar\Desktop\LeHTML\LeHTML\obj\Debug\LeHTML.pdb
